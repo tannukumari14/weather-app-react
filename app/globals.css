@@ -1,0 +1,59 @@
+.page-container {
+  height: 100vh; /* Adjust height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://yesofcorsa.com/wp-content/uploads/2020/05/4K-Weather-Best-Wallpaper-1024x576.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.search-form {
+  display: inline-block;
+}
+
+.search-form input[type="text"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.search-form button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #007bff; /* Adjust color as needed */
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background-color: #0056b3; /* Darker shade for hover effect */
+}
