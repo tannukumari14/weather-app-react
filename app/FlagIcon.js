@@ -18,4 +18,3 @@ const FlagIcon = ({ weatherData }) => {
 };
 
 export default FlagIcon;
-

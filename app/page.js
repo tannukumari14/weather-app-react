@@ -1,21 +1,18 @@
+
 "use client";
 import React, { useState } from "react";
 import "./globals.css";
 import Header from "./Header";
 import DataDisplay from './DataDisplay';
-<<<<<<< HEAD
-=======
 
->>>>>>> b891a984594ff9ec0808d62b521fea5862b1f043
 
 const Page = () => {
   const [input, setInput] = useState(""); 
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
-<<<<<<< HEAD
+
   const [isCountryClicked, setIsCountryClicked] = useState(false);
-=======
->>>>>>> b891a984594ff9ec0808d62b521fea5862b1f043
+
 
   const apiKey = 'ad39eca759f91b30f0cd7e38e3b0ad3b';
  
@@ -45,7 +42,7 @@ const Page = () => {
 
   return (
     <div className="content">
-      <Header onCountryClick={onCountryClick} weatherData={isCountryClicked ? weatherData : null} />
+      <Header onCountryClick={onCountryClick} weatherData={ weatherData } />
       <h1>Welcome to My Weather App</h1>
       <h2>Find current weather conditions:</h2>
       <form className="search-form" onSubmit={(e) => { e.preventDefault(); handleSearch(); }}>
@@ -66,4 +63,3 @@ const Page = () => {
 };
 
 export default Page;
-
