@@ -3,13 +3,12 @@ import React, { useState } from "react";
 import "./globals.css";
 import Header from "./Header";
 import DataDisplay from './DataDisplay';
-import Alerts from "./Alerts.js";
+
 
 const Page = () => {
-  const [input, setInput] = useState(""); // State to manage input value
+  const [input, setInput] = useState(""); 
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
-  const [alerts, setAlerts] = useState([]); // State to manage alerts
 
   const apiKey = 'ad39eca759f91b30f0cd7e38e3b0ad3b';
 
