@@ -3,12 +3,19 @@ import React, { useState } from "react";
 import "./globals.css";
 import Header from "./Header";
 import DataDisplay from './DataDisplay';
+<<<<<<< HEAD
+=======
+
+>>>>>>> b891a984594ff9ec0808d62b521fea5862b1f043
 
 const Page = () => {
-  const [input, setInput] = useState(""); // State to manage input value
+  const [input, setInput] = useState(""); 
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
+<<<<<<< HEAD
   const [isCountryClicked, setIsCountryClicked] = useState(false);
+=======
+>>>>>>> b891a984594ff9ec0808d62b521fea5862b1f043
 
   const apiKey = 'ad39eca759f91b30f0cd7e38e3b0ad3b';
  

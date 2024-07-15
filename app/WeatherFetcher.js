@@ -1,12 +1,12 @@
 
 
-const WeatherFetcher = () => {
+// const WeatherFetcher = () => {
 
 
-  return (
-    <div>Rani Singh</div>
-  );
-};
+//   return (
+//     <div>Rani Singh</div>
+//   );
+// };
 
-export default WeatherFetcher;
+// export default WeatherFetcher;
 

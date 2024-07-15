@@ -1,39 +1,10 @@
-.page-container {
-  height: 100vh; 
-}
-
 .background-image {
   height: 100%;
   background-image: url("https://t4.ftcdn.net/jpg/07/96/10/77/240_F_796107782_uMEwNQoqNo3SLfnVzadLG38lYmGCLzhH.jpg");
-  background-size: cover;
 }
-
-
-.content h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color :black
-}
-.content h2 {
-  font-size: 20px;
-  margin-bottom: 1rem;
-  color :black
-}
-
-.content p {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  color:black;
-  
-}
-#paragraph {
-  color: black;
-}
-
 
 
 #paragraph{
-  color: #0056b3;
   font-weight: 100px;
 }
 
@@ -41,20 +12,12 @@
   width: 50px; 
   height: 50px; 
   margin: 5px; 
-  margin-bottom: 20px;
+  margin-bottom: -15px;
 }
 
-
-.flag-image {
-  width: 50px; /* Adjust image size */
-  height: auto;
-
-
-}
 
 .display {
    margin-top: 20px;
-   background-color: transparent;
    color: black;
    font-weight: bold;
 }
@@ -67,6 +30,7 @@
 color:black;
 }
 
+<<<<<<< HEAD
 .transparent-background {
   background-color: transparent;
 }
@@ -75,6 +39,8 @@ color:black;
     margin-top:50px;
 }
 
+=======
+>>>>>>> b891a984594ff9ec0808d62b521fea5862b1f043
 
 @media screen and (max-width: 926px){
 body{
@@ -95,13 +61,13 @@ body{
 
 .content h1 {
   font-size: 16px;
-  margin-top: 1rem;
+  margin-top: 16px;
   color :black
 }
 
 .content h2 {
   font-size: 10px;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
   color :black
 }
 
@@ -126,7 +92,6 @@ body{
 }
 .svg_image {
   display: flex;
-  justify-content: space-around;   
   align-items: center; 
   margin-top: 120px;
 }
@@ -160,8 +125,8 @@ body{
   color: white;
 }
   .content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 40px;
+    margin-bottom: 16px;
     color :black
   }
   .content h2 {
@@ -171,30 +136,28 @@ body{
   }
   
   .content p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+    font-size: 30px;
+    margin-bottom: 16px;
     color:black;
   }
   .search-form button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
+    padding: 16px;
+    font-size: 16px;
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 0 4px 4px 0;
   }
   .search-form input[type="text"] {
-    padding: 0.5rem;
-    font-size: 1rem;
+    padding: 16px;
+    font-size: 16px;
     border: none;
   }
   .svg_image {
     display: flex;
-    justify-content: space-around; /* Space images evenly */
-    align-items: center; /* Center vertically */
-    width: 60%; /* Adjust width as needed */
+    align-items: center; 
+    width: 60%; 
   }
-  
   
 .header {
   display: flex;
