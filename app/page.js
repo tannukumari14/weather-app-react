@@ -39,7 +39,7 @@ const Page = () => {
 
   return (
     <div className="content">
-      <Header onCountryClick={onCountryClick} weatherData={isCountryClicked ? weatherData : null} />
+      <Header onCountryClick={onCountryClick} weatherData={ weatherData } />
       <h1>Welcome to My Weather App</h1>
       <h2>Find current weather conditions:</h2>
       {!isCountryClicked && (
