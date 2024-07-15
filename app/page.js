@@ -1,11 +1,11 @@
-"use client"
-import React, { useState } from 'react';
-import './globals.css';
-import Header from './Header';
+"use client";
+import React, { useState } from "react";
+import "./globals.css";
+import Header from "./Header";
 import DataDisplay from './DataDisplay';
 
 const Page = () => {
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState(""); 
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
   const [isCountryClicked, setIsCountryClicked] = useState(false);
@@ -28,18 +28,18 @@ const Page = () => {
       })
       .catch(error => {
         console.error('There was a problem with your fetch operation:', error);
-        setError(error.message);
+        setError(error.message);     
       });
   };
 
   const onCountryClick = (country) => {
-    setInput('');
+    setInput(''); 
     handleSearch(country);
   };
 
   return (
     <div className="content">
-      <Header onCountryClick={onCountryClick} weatherData={ weatherData } />
+      <Header onCountryClick={onCountryClick} weatherData={isCountryClicked ? weatherData : null} />
       <h1>Welcome to My Weather App</h1>
       <h2>Find current weather conditions:</h2>
       {!isCountryClicked && (

@@ -1,4 +1,6 @@
-import FlagIcon from './FlagIcon'
+import React from 'react';
+import FlagIcon from './FlagIcon';
+
 const Header = ({ onCountryClick, weatherData }) => {
   return (
     <div className="header">
@@ -28,7 +30,7 @@ const Header = ({ onCountryClick, weatherData }) => {
           onClick={() => onCountryClick('Nepal')}
         />
       </div>
-
+      {weatherData && <FlagIcon weatherData={weatherData} />}
     </div>
   );
 };
