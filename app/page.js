@@ -1,14 +1,16 @@
-"use client"
-
+"use client";
 import React, { useState } from "react";
 import "./globals.css";
 import Header from "./Header";
 import DataDisplay from './DataDisplay';
+import Alerts from "./Alerts.js";
 
 const Page = () => {
   const [input, setInput] = useState(""); // State to manage input value
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
+  const [alerts, setAlerts] = useState([]); // State to manage alerts
+
   const apiKey = 'ad39eca759f91b30f0cd7e38e3b0ad3b';
 
   const handleSearch = () => {
@@ -20,35 +22,20 @@ const Page = () => {
         return response.json();
       })
       .then(weatherData => {
-  setWeatherData(weatherData); // Set weatherData state
-      console.log('Weather Data:', weatherData.list);
-
-  // Iterate over weatherData using for...in loop
-  //for (const key in weatherData) {
-   //    const description = weatherData.weather[0].description
-    //   console.log(description )
-   
-     // console.log(`${key}: ${weatherData[key]}`);
-  
-   
- // }
-   
-}) 
-        
+        setWeatherData(weatherData);
+      })
       .catch(error => {
         console.error('There was a problem with your fetch operation:', error);
-        setError(error.message);
-        setWeatherData(null); // Resetting weather data in case of error
+        setError(error.message);     
       });
   };
 
   return (
-    <div className="app">
 
-      
       <div className="content">
+        <Header  />
         <h1>Welcome to My Weather App</h1>
-        <p id="paragraph">Find current weather conditions:</p>
+        <h2>Find current weather conditions:</h2>
         <form className="search-form" onSubmit={(e) => { e.preventDefault(); handleSearch(); }}>
           <input
             type="text"
@@ -60,13 +47,13 @@ const Page = () => {
         </form>
         {error && <p>Error: {error}</p>}
         {weatherData && (
-          <>
-           // <DataDisplay weatherData= {weatherData} />
-            
-          </>
+          <DataDisplay
+            weatherData={weatherData}
+          />
         )}
+        
       </div>
-    </div>
+ 
   );
 };
 

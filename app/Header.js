@@ -1,8 +1,8 @@
-// Header.js
+
 
 import React from 'react';
 
-const Header = () => {
+const Header = ({weatherData}) => {
   return (
     <div className="header">
       <div className="svg_image">
@@ -26,6 +26,7 @@ const Header = () => {
           alt="Nepal Flag"
           className="flag-image"
         />
+      
       </div>
     </div>
   );
