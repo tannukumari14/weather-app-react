@@ -34,3 +34,4 @@ const Header = ({ onCountryClick, weatherData }) => {
 };
 
 export default Header;
+ 
