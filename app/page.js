@@ -1,21 +1,17 @@
-
 "use client";
 import React, { useState } from "react";
 import "./globals.css";
 import Header from "./Header";
 import DataDisplay from './DataDisplay';
 
-
 const Page = () => {
   const [input, setInput] = useState(""); 
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
-
   const [isCountryClicked, setIsCountryClicked] = useState(false);
 
-
   const apiKey = 'ad39eca759f91b30f0cd7e38e3b0ad3b';
- 
+
   const handleSearch = (country) => {
     let query = country || input;
 
@@ -36,26 +32,29 @@ const Page = () => {
       });
   };
 
-  const onCountryClick = (country) => { 
+  const onCountryClick = (country) => {
+    setInput(''); 
     handleSearch(country);
   };
 
   return (
     <div className="content">
-      <Header onCountryClick={onCountryClick} weatherData={ weatherData } />
+      <Header onCountryClick={onCountryClick} weatherData={isCountryClicked ? weatherData : null} />
       <h1>Welcome to My Weather App</h1>
       <h2>Find current weather conditions:</h2>
-      <form className="search-form" onSubmit={(e) => { e.preventDefault(); handleSearch(); }}>
-        <input
-          type="text"
-          placeholder="Enter location..."
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        />
-        <button type="submit">Search</button>
-      </form>
+      {!isCountryClicked && (
+        <form className="search-form" onSubmit={(e) => { e.preventDefault(); handleSearch(); }}>
+          <input
+            type="text"
+            placeholder="Enter location..."
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
+          <button type="submit">Search</button>
+        </form>
+      )}
       {error && <p>Error: {error}</p>}
-      { weatherData && (
+      {weatherData && !isCountryClicked && (
         <DataDisplay weatherData={weatherData} />
       )}
     </div>

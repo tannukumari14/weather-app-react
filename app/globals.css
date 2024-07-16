@@ -30,7 +30,6 @@
 color:black;
 }
 
-<<<<<<< HEAD
 .transparent-background {
   background-color: transparent;
 }
@@ -39,8 +38,6 @@ color:black;
     margin-top:50px;
 }
 
-=======
->>>>>>> b891a984594ff9ec0808d62b521fea5862b1f043
 
 @media screen and (max-width: 926px){
 body{
@@ -90,11 +87,11 @@ body{
   font-size: 10px;
   border: none;
 }
-.svg_image {
+/* .svg_image {
   display: flex;
   align-items: center; 
   margin-top: 120px;
-}
+} */
 
 
 .header {
@@ -180,6 +177,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
 }
 
 .flag-image {
@@ -193,7 +191,7 @@ body{
   
 }
 .weather-data {
-  margin-top: 10px;
+  margin-top: -400px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
