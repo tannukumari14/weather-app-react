@@ -3,12 +3,14 @@ import React, { useState } from 'react';
 import './globals.css';
 import Header from './Header';
 import DataDisplay from './DataDisplay';
+import WeatherApp from "./WeatherApp"
 
 const Page = () => {
   const [input, setInput] = useState('');
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
   const [isCountryClicked, setIsCountryClicked] = useState(false);
+  
 
   const apiKey = 'ad39eca759f91b30f0cd7e38e3b0ad3b';
 
@@ -50,13 +52,14 @@ const Page = () => {
             value={input}
             onChange={(e) => setInput(e.target.value)}
           />
-          <button type="submit">Search</button>
+          <button type="submit"><WeatherApp/>Search</button>
         </form>
       )}
       {error && <p>Error: {error}</p>}
       {weatherData && !isCountryClicked && (
         <DataDisplay weatherData={weatherData} />
       )}
+      {/* <WeatherApp/> */}
     </div>
   );
 };

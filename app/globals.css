@@ -3,7 +3,6 @@
   background-image: url("https://t4.ftcdn.net/jpg/07/96/10/77/240_F_796107782_uMEwNQoqNo3SLfnVzadLG38lYmGCLzhH.jpg");
 }
 
-
 #paragraph{
   font-weight: 100px;
 }
@@ -87,11 +86,7 @@ body{
   font-size: 10px;
   border: none;
 }
-/* .svg_image {
-  display: flex;
-  align-items: center; 
-  margin-top: 120px;
-} */
+
 
 
 .header {
@@ -205,4 +200,23 @@ body{
   margin: 0 10px;
 }
 
-  
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+}
+
+.alert-badge {
+  background-color: #ff0000; /* Red for alert */
+}
+
+.no-alert-badge {
+  background-color: #294830; /* Green for no alert */
+}
