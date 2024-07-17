@@ -2,7 +2,7 @@ import React from 'react';
 
 const FlagIcon = ({ weatherData }) => {
   if (!weatherData || !weatherData.list || !weatherData.city) {
-    return <p>Loading...</p>;
+    return true;
   }
 
   const temp = weatherData.list[0].main.temp;

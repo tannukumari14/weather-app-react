@@ -31,6 +31,11 @@ const Header = ({ onCountryClick, weatherData }) => {
         />
       </div>
       {weatherData && <FlagIcon weatherData={weatherData} />}
+      {weatherData && (
+        <div>
+          <h2>Weather data for {weatherData.city.name}</h2>
+        </div>
+      )}
     </div>
   );
 };

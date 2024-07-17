@@ -37,4 +37,3 @@ const DataDisplay = ({ weatherData }) => {
 };
 
 export default DataDisplay;
-
