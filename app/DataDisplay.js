@@ -29,30 +29,10 @@ const DataDisplay = ({ weatherData }) => {
       <p>Description: {firstWeatherItem.weather[0].description}</p>
       <p>Wind Speed: {firstWeatherItem.wind.speed} m/s</p>
       <p>Humidity: {firstWeatherItem.main.humidity}%</p>
-      <FlagIcon  temp1={temp} description={description} />
+   
     </div>
   );
 };
 
 export default DataDisplay;
-// import React from 'react';
-
-// const DataDisplay = ({ weatherData }) => {
-//   const temp = weatherData.list[0].main.temp;
-//   const description = weatherData.list[0].weather[0].description;
-//   const sunset = new Date(weatherData.city.sunset * 1000).toLocaleTimeString();
-//   const sunrise = new Date(weatherData.city.sunrise * 1000).toLocaleTimeString();
-
-//   return (
-//     <div className="weather-data">
-//       <h3>Current Weather in {weatherData.city.name}</h3>
-//       <p>Temperature: {temp}°C</p>
-//       <p>Description: {description}</p>
-//       <p>Sunrise: {sunrise}</p>
-//       <p>Sunset: {sunset}</p>
-//     </div>
-//   );
-// };
-
-// export default DataDisplay;
 

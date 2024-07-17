@@ -33,7 +33,7 @@ const Page = () => {
   };
 
   const onCountryClick = (country) => {
-    setInput(''); 
+  
     handleSearch(country);
   };
 

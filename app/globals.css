@@ -1,7 +1,3 @@
-.background-image {
-  height: 100%;
-  background-image: url("https://t4.ftcdn.net/jpg/07/96/10/77/240_F_796107782_uMEwNQoqNo3SLfnVzadLG38lYmGCLzhH.jpg");
-}
 
 
 #paragraph{
@@ -20,6 +16,7 @@
    margin-top: 20px;
    color: black;
    font-weight: bold;
+   background-color:#f9f9f9;
 }
 
 .weather h2{
@@ -30,18 +27,13 @@
 color:black;
 }
 
-.transparent-background {
-  background-color: transparent;
-}
-.weather-data{
-    background-color: red;
-    margin-top:50px;
-}
+
+
 
 
 @media screen and (max-width: 926px){
 body{
-  background-image: url("https://weatherofbharat.com/wp-content/uploads/2024/04/field-poppy-full-hd-wallpaper-5236879-1024x576.jpg");
+
   background-size: cover;
   margin:0px;
   padding: 0px;
@@ -173,36 +165,19 @@ body{
   flex-direction: column;
 }
 
-.svg_image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-}
 
-.flag-image {
-  margin: 10px;
-  cursor: pointer;
-}
-
-.weather-data {
-  margin-top: 20px;
-  text-align: center;
-  
-}
 .weather-data {
   margin-top: -400px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #f9f9f9;
+  font-weight: bold;
 }
 
 .flag-image {
   cursor: pointer;
-  width: 50px;
-  height: auto;
-  margin: 0 10px;
+ 
 }
 
   
