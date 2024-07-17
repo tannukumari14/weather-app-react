@@ -2,7 +2,7 @@ import React from 'react';
 
 const FlagIcon = ({ weatherData }) => {
   if (!weatherData || !weatherData.list || !weatherData.city) {
-    return true;
+    return null;
   }
 
   const temp = weatherData.list[0].main.temp;
@@ -12,7 +12,6 @@ const FlagIcon = ({ weatherData }) => {
 
   return (
     <div className="weather-data">
-      <h3>Current Weather in {weatherData.city.name}</h3>
       <p>Temperature: {temp}°C</p>
       <p>Description: {description}</p>
       <p>Sunrise: {sunrise}</p>

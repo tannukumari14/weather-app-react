@@ -52,27 +52,11 @@ const Page = () => {
 
   return (
     <div className="content">
-      {/* <Header onCountryClick={onCountryClick} weatherData={isCountryClicked ? weatherData : null} /> */}
-       <Dropdown onCountryClick={onDropdownClick} />
+      <Dropdown onCountryClick={onDropdownClick} />
       <Header onCountryClick={onCountryClick} weatherData={dataSource === 'flag' ? weatherData : null} />
      
       <h1>Welcome to My Weather App</h1>
       <h2>Find current weather conditions:</h2>
-      {/* {!isCountryClicked && (
-        <form className="search-form" onSubmit={(e) => { e.preventDefault(); handleSearch(); }}>
-          <input
-            type="text"
-            placeholder="Enter location..."
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-          />
-          <button type="submit">Search</button>
-        </form>
-      )}
-      {error && <p>Error: {error}</p>}
-      {weatherData && (
-        <DataDisplay weatherData={weatherData} />
-      )} */}
       {dataSource !== 'flag' && dataSource !== 'dropdown' && (
         <form className="search-form" onSubmit={onFormSubmit}>
           <input
@@ -84,6 +68,7 @@ const Page = () => {
           <button type="submit">Search</button>
         </form>
       )}
+
       {error && <p>Error: {error}</p>}
       {weatherData && dataSource === 'search' && (
         <DataDisplay weatherData={weatherData} />

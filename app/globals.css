@@ -28,11 +28,9 @@ color:black;
 
 
 
-
-
 @media screen and (max-width: 926px){
 body{
-
+  background-image: url("https://weatherofbharat.com/wp-content/uploads/2024/04/field-poppy-full-hd-wallpaper-5236879-1024x576.jpg");
   background-size: cover;
   margin:0px;
   padding: 0px;
@@ -47,11 +45,12 @@ body{
     color: white;
   }
 
-.content h1 {
-  font-size: 16px;
-  margin-top: 16px;
-  color :black
-}
+  .content h1 {
+    font-size: 16px;
+    margin-top: 16px;
+    color :black;
+  }  
+  
 
 .content h2 {
   font-size: 10px;
@@ -79,8 +78,6 @@ body{
   border: none;
 }
 
-
-
 .header {
   display: flex;
   justify-content: center;
@@ -88,6 +85,14 @@ body{
   height: 180px; 
   margin-top:20px;
 }
+.svg_image {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 60%; 
+  margin-top: 20px;
+}
+
 
 }
 
@@ -110,8 +115,10 @@ body{
 }
   .content h1 {
     font-size: 40px;
+    font-weight: 100px;
     margin-bottom: 16px;
-    color :black
+    color :black;
+    padding: 20px;
   }
   .content h2 {
     font-size: 20px;
@@ -139,8 +146,10 @@ body{
   }
   .svg_image {
     display: flex;
+    justify-content: center;
     align-items: center; 
     width: 60%; 
+    margin-top: 40px;
   }
   
 .header {
@@ -158,7 +167,6 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-left: 40px;
 }
 
 .dropdown{
@@ -168,7 +176,7 @@ body{
 }
 
 .weather-data {
-  margin-top: -400px;
+  margin-top: -281px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
