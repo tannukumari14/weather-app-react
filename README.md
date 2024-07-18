@@ -9,7 +9,6 @@ command:
 npx create-next-app Weather App
 
 
-
 ## Technologies used.
 1. Next.js: A React framework for server-side rendering, static site generation, and building optimized web applications.
 2. Bootstrap: Used for responsive design and media queries.
