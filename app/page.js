@@ -1,5 +1,6 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
+import Login from './Login/page';
 import './globals.css';
 import Header from './Header';
 import DataDisplay from './DataDisplay';
@@ -11,10 +12,11 @@ const Page = () => {
   const [error, setError] = useState(null);
   const [isCountryClicked, setIsCountryClicked] = useState(false);
   const [dataSource, setDataSource] = useState('');
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // State to handle login
 
   const apiKey = 'ad39eca759f91b30f0cd7e38e3b0ad3b';
 
-  const handleSearch = (location , source) => {
+  const handleSearch = (location, source) => {
     let query = location || input;
 
     fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${query}&appid=${apiKey}&units=metric`)
@@ -50,31 +52,42 @@ const Page = () => {
     handleSearch(null, 'search');
   };
 
+  const handleLoginSubmit = (e) => {
+    e.preventDefault();
+    setIsLoggedIn(true); // Set logged-in state to true
+  };
+
   return (
     <div className="content">
-      <Dropdown onCountryClick={onDropdownClick} />
-      <Header onCountryClick={onCountryClick} weatherData={dataSource === 'flag' ? weatherData : null} />
-     
-      <h1>Welcome to My Weather App</h1>
-      <h2>Find current weather conditions:</h2>
-      {dataSource !== 'flag' && dataSource !== 'dropdown' && (
-        <form className="search-form" onSubmit={onFormSubmit}>
-          <input
-            type="text"
-            placeholder="Enter location..."
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-          />
-          <button type="submit">Search</button>
-        </form>
-      )}
+      {!isLoggedIn ? (
+        <Login onSubmit={handleLoginSubmit} />
+      ) : (
+        <>
+          <Dropdown onCountryClick={onDropdownClick} />
+          <Header onCountryClick={onCountryClick} weatherData={dataSource === 'flag' ? weatherData : null} />
+          
+          <h1>Welcome to My Weather App</h1>
+          <h2>Find current weather conditions:</h2>
+          {dataSource !== 'flag' && dataSource !== 'dropdown' && (
+            <form className="search-form" onSubmit={onFormSubmit}>
+              <input
+                type="text"
+                placeholder="Enter location..."
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+              />
+              <button type="submit">Search</button>
+            </form>
+          )}
 
-      {error && <p>Error: {error}</p>}
-      {weatherData && dataSource === 'search' && (
-        <DataDisplay weatherData={weatherData} />
-      )}
-      {weatherData && dataSource === 'dropdown' && (
-        <DataDisplay weatherData={weatherData} />
+          {error && <p>Error: {error}</p>}
+          {weatherData && dataSource === 'search' && (
+            <DataDisplay weatherData={weatherData} />
+          )}
+          {weatherData && dataSource === 'dropdown' && (
+            <DataDisplay weatherData={weatherData} />
+          )}
+        </>
       )}
     </div>
   );
