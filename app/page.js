@@ -9,7 +9,6 @@ const Page = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
   const [isCountryClicked, setIsCountryClicked] = useState(false);
-
   const apiKey = 'ad39eca759f91b30f0cd7e38e3b0ad3b';
 
   const handleSearch = (country) => {
@@ -33,11 +32,8 @@ const Page = () => {
   };
 
   const onCountryClick = (country) => {
-<<<<<<< HEAD
-  
-=======
+
     setInput('');
->>>>>>> 66477333dc7158ce275e131c0af5fe3a5f9b1e46
     handleSearch(country);
   };
 

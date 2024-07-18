@@ -1,9 +1,5 @@
 
 
-#paragraph{
-  font-weight: 100px;
-}
-
 .flag-image {
   width: 50px; 
   height: 50px; 
@@ -28,7 +24,10 @@ color:black;
 }
 
 
-
+.weather-data{
+    background-color: red;
+    margin-top:50px;
+}
 
 
 @media screen and (max-width: 926px){
@@ -79,11 +78,6 @@ body{
   font-size: 10px;
   border: none;
 }
-/* .svg_image {
-  display: flex;
-  align-items: center; 
-  margin-top: 120px;
-} */
 
 
 .header {
@@ -163,6 +157,7 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-left :50px;
 }
 
 
@@ -179,5 +174,12 @@ body{
   cursor: pointer;
  
 }
-
+.weather-data h1{
+   color:black;
+   font-size: 30px;
+  font-weight: bold;   
+}
+.display h1{
+   ]font-weight: bold;
+}
   
