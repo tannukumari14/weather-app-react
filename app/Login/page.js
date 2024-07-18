@@ -2,7 +2,7 @@ import React from 'react';
 
 const Login = ({ onSubmit }) => {
     return (
-        <div>
+        <div className="parent-container">
             <form onSubmit={onSubmit}>
                <div className="form-group">
                    <label>Name:</label>

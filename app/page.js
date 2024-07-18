@@ -12,7 +12,7 @@ const Page = () => {
   const [error, setError] = useState(null);
   const [isCountryClicked, setIsCountryClicked] = useState(false);
   const [dataSource, setDataSource] = useState('');
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // State to handle login
+  const [isLoggedIn, setIsLoggedIn] = useState(false); 
 
   const apiKey = 'ad39eca759f91b30f0cd7e38e3b0ad3b';
 
@@ -36,12 +36,26 @@ const Page = () => {
         setError(error.message);
       });
   };
-
   const onCountryClick = (country) => {
-
     setInput('');
-    handleSearch(country);
+    handleSearch(country, "flag");
   };
+
+  const onDropdownClick = (country) => {
+    setInput('');
+    handleSearch(country, 'dropdown');
+  };
+
+  const onFormSubmit = (e) => {
+    e.preventDefault();
+    handleSearch(null, 'search');
+  };
+
+  const handleLoginSubmit = (e) => {
+    e.preventDefault();
+    setIsLoggedIn(true); 
+  };
+
 
   return (
     <div className="content">

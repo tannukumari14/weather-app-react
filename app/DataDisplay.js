@@ -1,5 +1,4 @@
 import React from 'react';
-import FlagIcon from './FlagIcon'
 
 const DataDisplay = ({ weatherData }) => {
   const firstWeatherItem = weatherData.list[0];;
@@ -14,7 +13,6 @@ const DataDisplay = ({ weatherData }) => {
 
     let alertMessage = '';
     let Message = '';
-    let alertRainMessage = '';
 
     if (temp > 30) {
       alertMessage = 'Heat-based storm alert: High temperature detected. ';
@@ -32,11 +30,7 @@ const DataDisplay = ({ weatherData }) => {
 
   return (
     <div className="display">
-<<<<<<< HEAD
-        <p>{Message}</p>
-=======
-      <div className="badge">
->>>>>>> 0fc14c797c78508caea80b39a06e4d366c9b5afe
+      <p>{Message}</p>
       <p>{alertMessage}</p>
       <h2>Current Weather</h2>
       <p>Temperature: {temp}°C </p>
@@ -49,13 +43,6 @@ const DataDisplay = ({ weatherData }) => {
       <p>Description: {firstWeatherItem.weather[0].description}</p>
       <p>Wind Speed: {firstWeatherItem.wind.speed} m/s</p>
       <p>Humidity: {firstWeatherItem.main.humidity}%</p>
-<<<<<<< HEAD
-   
-   
-=======
-      <FlagIcon  temp1={temp} description={description} />
-      </div>
->>>>>>> 0fc14c797c78508caea80b39a06e4d366c9b5afe
     </div>
   );
 };
